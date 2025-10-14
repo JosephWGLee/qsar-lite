@@ -1,16 +1,19 @@
-import pandas as pd
 import deepchem as dc
-from rdkit import Chem
-import warnings
-from rdkit import RDLogger
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 RDLogger.DisableLog('rdApp.*')
 
-#Importing ESOL Delaney solubility dataset 
-
 def load_data():
+
+    """ 
+    Loads the ESOL (Delaney) solubility dataset from Deepchem.
+
+    Returns: 
+        smiles_train: SMILES strings from training dataset
+        sol_train: Experimentally determined logS values 
     
+    """
+
     tasks, datasets, transformers = dc.molnet.load_delaney(featurizer="GraphConv", splitter="random", reload=False)
     
     train_dataset, valid_dataset, test_dataset = datasets
