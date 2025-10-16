@@ -16,8 +16,8 @@ def dataframe_creation(reg, x_test, y_test, smiles_test, X_train, y_train, smile
         y_... (pd.series): Split solubility values 
         
     Returns:
-        test_dataframe (pd.series): Test dataframe values
-        train_dataframe (pd.series): Train dataframe values 
+        test_dataframe (pd.DataFrame): Test dataframe values
+        train_dataframe (pd.DataFrame): Train dataframe values 
     
     """
     
