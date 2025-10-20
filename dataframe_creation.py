@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-def dataframe_creation(reg, x_test, y_test, smiles_test, X_train, y_train, smiles_train):
+def dataframe_creation(reg, X_test, y_test, smiles_test, X_train, y_train, smiles_train):
 
     """
     Creates a datarame for the trained and test data 

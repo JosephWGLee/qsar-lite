@@ -21,6 +21,6 @@ def first_training(X_train, y_train, seed):
     reg.fit(X_train, y_train)
     
     score=(cross_val_score(reg, X_train, y_train, cv=3, n_jobs=-1).mean())
-    return(f"Initial Cross-validation score is: {score}")
+    print(f"Initial Cross-validation score is: {score}")
 
     return reg, score 
